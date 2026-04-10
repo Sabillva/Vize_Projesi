@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sabi'nin Kitaplığı - En güzel kitapları keşfedin. Kişisel gelişim, roman, felsefe, klasikler ve daha fazlası.">
+    <meta name="theme-color" content="#dec7be">
+    <title>Sabi'nin Kitaplığı - Kitap E-Ticaret</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📚</span>
+                <div class="logo-text">
+                    <span class="logo-name">Sabi'nin Kitaplığı</span>
+                    <span class="logo-tagline">Kitaplarla Dolu Bir Dünya</span>
+                </div>
+            </a>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Kitap veya yazar ara..." class="search-input">
+                <button class="search-btn" id="searchBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link active">Ana Sayfa</a>
+                <a href="#all-books" class="nav-link">Tüm Kitaplar</a>
+                <a href="#featured" class="nav-link">Öne Çıkanlar</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-search">
+                <input type="text" id="mobileSearchInput" placeholder="Kitap veya yazar ara..." class="search-input">
+                <button class="search-btn" id="mobileSearchBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link active">Ana Sayfa</a>
+                <a href="#all-books" class="mobile-nav-link">Tüm Kitaplar</a>
+                <a href="#featured" class="mobile-nav-link">Öne Çıkanlar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">2026 Yeni Koleksiyon</span>
+                    <h1 class="hero-title">Kitaplarla Dolu<br><span class="highlight">Sıcak Bir Dünya</span></h1>
+                    <p class="hero-desc">Kişisel gelişimden klasiklere, felsefeden romanlara kadar binlerce kitap sizi bekliyor. Okuma yolculuğunuza bugün başlayın.</p>
+                    <div class="hero-buttons">
+                        <a href="#all-books" class="btn btn-primary">Kitapları Keşfet</a>
+                        <a href="#categories" class="btn btn-secondary">Kategorilere Göz At</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Kitap</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">9</span>
+                            <span class="stat-label">Kategori</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Dil</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="book-stack">
+                        <div class="floating-book book-1"></div>
+                        <div class="floating-book book-2"></div>
+                        <div class="floating-book book-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-pattern"></div>
+    </section>
+
+    <!-- Featured Books -->
+    <section class="section" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Öne Çıkan Kitaplar</h2>
+                <p class="section-desc">Bu ayın en çok tercih edilen kitapları</p>
+            </div>
+            <div class="books-grid" id="featuredBooks">
+                <!-- Dinamik olarak yüklenecek -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section section-alt" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kategoriler</h2>
+                <p class="section-desc">İlgi alanınıza göre kitapları keşfedin</p>
+            </div>
+            <div class="categories-grid">
+                <button class="category-card active" data-category="all">
+                    <span class="category-icon">📚</span>
+                    <span class="category-name">Tümü</span>
+                </button>
+                <button class="category-card" data-category="kisisel-gelisim">
+                    <span class="category-icon">🌱</span>
+                    <span class="category-name">Kişisel Gelişim</span>
+                </button>
+                <button class="category-card" data-category="genc-kurgu">
+                    <span class="category-icon">✨</span>
+                    <span class="category-name">Genç Kurgu</span>
+                </button>
+                <button class="category-card" data-category="felsefe">
+                    <span class="category-icon">🤔</span>
+                    <span class="category-name">Felsefe</span>
+                </button>
+                <button class="category-card" data-category="klasikler">
+                    <span class="category-icon">📖</span>
+                    <span class="category-name">Klasikler</span>
+                </button>
+                <button class="category-card" data-category="siyaset">
+                    <span class="category-icon">🏛️</span>
+                    <span class="category-name">Siyaset</span>
+                </button>
+                <button class="category-card" data-category="roman">
+                    <span class="category-icon">💕</span>
+                    <span class="category-name">Roman</span>
+                </button>
+                <button class="category-card" data-category="dedektif">
+                    <span class="category-icon">🔍</span>
+                    <span class="category-name">Dedektif</span>
+                </button>
+                <button class="category-card" data-category="fizik">
+                    <span class="category-icon">⚛️</span>
+                    <span class="category-name">Fizik</span>
+                </button>
+                <button class="category-card" data-category="diger">
+                    <span class="category-icon">📕</span>
+                    <span class="category-name">Diğer</span>
+                </button>
+            </div>
+            
+            <div class="language-filter">
+                <span class="filter-label">Dil:</span>
+                <div class="language-buttons">
+                    <button class="lang-btn active" data-lang="all">Tümü</button>
+                    <button class="lang-btn" data-lang="turkce">Türkçe</button>
+                    <button class="lang-btn" data-lang="ingilizce">İngilizce</button>
+                    <button class="lang-btn" data-lang="rusca">Rusça</button>
+                    <button class="lang-btn" data-lang="azerbaycanca">Azerbaycanca</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Books -->
+    <section class="section" id="all-books">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tüm Kitaplar</h2>
+                <p class="section-desc" id="booksCount">Toplam 0 kitap listeleniyor</p>
+            </div>
+            <div class="books-grid" id="allBooks">
+                <!-- Dinamik olarak yüklenecek -->
+            </div>
+            <div class="no-results" id="noResults" style="display: none;">
+                <span class="no-results-icon">📭</span>
+                <h3>Sonuç Bulunamadı</h3>
+                <p>Arama kriterlerinize uygun kitap bulunamadı. Farklı bir arama deneyin.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">📚</span>
+                        <div class="logo-text">
+                            <span class="logo-name">Sabi'nin Kitaplığı</span>
+                            <span class="logo-tagline">Kitaplarla Dolu Bir Dünya</span>
+                        </div>
+                    </a>
+                    <p class="footer-desc">2026 yılından beri kitapseverlerle buluşuyoruz. En kaliteli kitapları en uygun fiyatlarla sizlere sunmak için çalışıyoruz.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="#all-books">Tüm Kitaplar</a></li>
+                        <li><a href="#featured">Öne Çıkanlar</a></li>
+                        <li><a href="#categories">Kategoriler</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Kategoriler</h4>
+                    <ul>
+                        <li><a href="#categories" data-category="kisisel-gelisim">Kişisel Gelişim</a></li>
+                        <li><a href="#categories" data-category="roman">Roman</a></li>
+                        <li><a href="#categories" data-category="felsefe">Felsefe</a></li>
+                        <li><a href="#categories" data-category="klasikler">Klasikler</a></li>
+                        <li><a href="#categories" data-category="dedektif">Dedektif</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>İletişim</h4>
+                    <ul>
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="#">İletişim</a></li>
+                        <li><a href="#">SSS</a></li>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sabi'nin Kitaplığı. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/books-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

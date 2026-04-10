@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sabi'nin Kitaplığı - Kitap Detayları">
+    <meta name="theme-color" content="#dec7be">
+    <title>Kitap Detayı - Sabi'nin Kitaplığı</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📚</span>
+                <div class="logo-text">
+                    <span class="logo-name">Sabi'nin Kitaplığı</span>
+                    <span class="logo-tagline">Kitaplarla Dolu Bir Dünya</span>
+                </div>
+            </a>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Kitap veya yazar ara..." class="search-input">
+                <button class="search-btn" id="searchBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="index.html#all-books" class="nav-link">Tüm Kitaplar</a>
+                <a href="index.html#featured" class="nav-link">Öne Çıkanlar</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-search">
+                <input type="text" id="mobileSearchInput" placeholder="Kitap veya yazar ara..." class="search-input">
+                <button class="search-btn" id="mobileSearchBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link">Ana Sayfa</a>
+                <a href="index.html#all-books" class="mobile-nav-link">Tüm Kitaplar</a>
+                <a href="index.html#featured" class="mobile-nav-link">Öne Çıkanlar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Book Detail -->
+    <main class="book-detail-page">
+        <div class="container">
+            <a href="index.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Tüm Kitaplara Dön
+            </a>
+            
+            <div class="book-detail" id="bookDetail">
+                <!-- Dinamik olarak yüklenecek -->
+            </div>
+            
+            <div class="book-not-found" id="bookNotFound" style="display: none;">
+                <span class="not-found-icon">📭</span>
+                <h2>Kitap Bulunamadı</h2>
+                <p>Aradığınız kitap bulunamadı. Ana sayfaya dönerek diğer kitapları keşfedebilirsiniz.</p>
+                <a href="index.html" class="btn btn-primary">Ana Sayfaya Dön</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Similar Books -->
+    <section class="section section-alt" id="similarBooksSection" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Benzer Kitaplar</h2>
+                <p class="section-desc">Bu kitabı beğendiyseniz bunları da sevebilirsiniz</p>
+            </div>
+            <div class="books-grid" id="similarBooks">
+                <!-- Dinamik olarak yüklenecek -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">📚</span>
+                        <div class="logo-text">
+                            <span class="logo-name">Sabi'nin Kitaplığı</span>
+                            <span class="logo-tagline">Kitaplarla Dolu Bir Dünya</span>
+                        </div>
+                    </a>
+                    <p class="footer-desc">2026 yılından beri kitapseverlerle buluşuyoruz. En kaliteli kitapları en uygun fiyatlarla sizlere sunmak için çalışıyoruz.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="index.html#all-books">Tüm Kitaplar</a></li>
+                        <li><a href="index.html#featured">Öne Çıkanlar</a></li>
+                        <li><a href="index.html#categories">Kategoriler</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Kategoriler</h4>
+                    <ul>
+                        <li><a href="index.html#categories">Kişisel Gelişim</a></li>
+                        <li><a href="index.html#categories">Roman</a></li>
+                        <li><a href="index.html#categories">Felsefe</a></li>
+                        <li><a href="index.html#categories">Klasikler</a></li>
+                        <li><a href="index.html#categories">Dedektif</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>İletişim</h4>
+                    <ul>
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="#">İletişim</a></li>
+                        <li><a href="#">SSS</a></li>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sabi'nin Kitaplığı. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/books-data.js"></script>
+    <script src="js/book-detail.js"></script>
+</body>
+</html>
